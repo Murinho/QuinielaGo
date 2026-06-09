@@ -381,6 +381,7 @@ h2 {
 }
 
 .pot-toggle {
+  position: relative;
   display: inline-flex;
   align-items: center;
   min-width: 0;
@@ -390,10 +391,13 @@ h2 {
 
 .pot-toggle input,
 .country-card input {
-  width: 1px;
-  height: 1px;
   position: absolute;
+  inset: 0 auto auto 0;
+  width: 0;
+  height: 0;
+  margin: 0;
   opacity: 0;
+  pointer-events: none;
 }
 
 .pot-box,
@@ -474,6 +478,7 @@ h2 {
 }
 
 .country-card {
+  position: relative;
   display: grid;
   grid-template-columns: auto 48px minmax(0, 1fr);
   align-items: center;
