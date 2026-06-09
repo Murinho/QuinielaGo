@@ -471,7 +471,7 @@ function renderWheel(wheelEl, items, rotation) {
     })
     .join("");
 
-  wheelEl.style.setProperty("--wheel-gradient", `conic-gradient(from -90deg, ${gradient})`);
+  wheelEl.style.setProperty("--wheel-gradient", `conic-gradient(from 90deg, ${gradient})`);
   wheelEl.style.setProperty("--wheel-rotation", `${rotation}deg`);
   wheelEl.style.removeProperty("--spin-duration");
   wheelEl.innerHTML = `
