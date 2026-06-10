@@ -138,6 +138,16 @@ function getReadableTextColor(hexColor) {
   return brightness > 150 ? "#111111" : "#ffffff";
 }
 
+function getCountryAccentColor(hexColor) {
+  const normalizedColor = hexColor.trim().toLowerCase();
+
+  if (normalizedColor === "#ffffff" || normalizedColor === "#fff") {
+    return "#111111";
+  }
+
+  return hexColor;
+}
+
 function getRandomPaletteColor() {
   return FIFA_COLORS[Math.floor(Math.random() * FIFA_COLORS.length)];
 }
@@ -671,13 +681,14 @@ function assignSelectedCountry() {
 
 function renderPlayerCard(player, index, country) {
   const [name, position, photo] = player;
+  const accentColor = getCountryAccentColor(country.color);
   const media = photo
     ? `<img src="${photo}" alt="Foto de ${escapeHtml(name)}" loading="lazy" />`
     : `<span>${escapeHtml(getInitials(name))}</span>`;
 
   return `
     <article class="player-card">
-      <div class="player-photo" style="--country-color: ${country.color}">
+      <div class="player-photo" style="--country-accent: ${accentColor}">
         ${media}
       </div>
       <div>
@@ -718,12 +729,17 @@ function renderAssignmentStep(person, country) {
   const groupMembers = getGroupMembers(country);
   const rivals = groupMembers.filter((member) => member.id !== country.id);
   const rank = getProbabilityRank(country.id);
+  const accentColor = getCountryAccentColor(country.color);
+  const accentTextColor = getReadableTextColor(accentColor);
 
   setGameStep("assignment");
   updateGameProgress();
 
   els.assignmentHero.innerHTML = `
-    <article class="country-detail-card" style="--country-color: ${country.color}">
+    <article
+      class="country-detail-card"
+      style="--country-color: ${country.color}; --country-accent: ${accentColor}; --country-accent-text: ${accentTextColor}"
+    >
       <div class="country-hero-block">
         <div class="country-flag-frame">
           <img
