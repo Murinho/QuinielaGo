@@ -132,9 +132,9 @@ const COUNTRY_DATA = {
     bestParticipation: "Fase de grupos",
     probability: 0.12,
     players: [
-      ["Alphonso Davies", "Lateral izquierdo"],
-      ["Jonathan David", "Delantero"],
-      ["Stephen Eustáquio", "Mediocampista"],
+      ["Alphonso Davies", "Lateral izquierdo", "assets/players/canada-alphonso-davies.jpg"],
+      ["Jonathan David", "Delantero", "assets/players/canada-jonathan-david.jpg"],
+      ["Stephen Eustáquio", "Mediocampista", "assets/players/canada-stephen-eustaquio.jpg"],
     ],
   },
   mexico: {
@@ -147,9 +147,9 @@ const COUNTRY_DATA = {
     bestParticipation: "Cuartos de final, 1970 y 1986",
     probability: 0.8,
     players: [
-      ["Edson Álvarez", "Mediocentro"],
-      ["Santiago Giménez", "Delantero"],
-      ["Johan Vásquez", "Defensa central"],
+      ["Edson Álvarez", "Mediocentro", "assets/players/mexico-edson-alvarez.png"],
+      ["Santiago Giménez", "Delantero", "assets/players/mexico-santiago-gimenez.png"],
+      ["Johan Vásquez", "Defensa central", "assets/players/mexico-johan-vasquez.jpg"],
     ],
   },
   usa: {
@@ -162,9 +162,9 @@ const COUNTRY_DATA = {
     bestParticipation: "Tercer lugar, 1930",
     probability: 1.2,
     players: [
-      ["Christian Pulisic", "Extremo"],
-      ["Weston McKennie", "Mediocampista"],
-      ["Tyler Adams", "Mediocentro"],
+      ["Christian Pulisic", "Extremo", "assets/players/usa-christian-pulisic.jpg"],
+      ["Weston McKennie", "Mediocampista", "assets/players/usa-weston-mckennie.jpg"],
+      ["Tyler Adams", "Mediocentro", "assets/players/usa-tyler-adams.jpg"],
     ],
   },
   spain: {
@@ -207,9 +207,9 @@ const COUNTRY_DATA = {
     bestParticipation: "Campeón, 1998 y 2018",
     probability: 13,
     players: [
-      ["Kylian Mbappé", "Delantero"],
-      ["Ousmane Dembélé", "Extremo"],
-      ["Michael Olise", "Extremo"],
+      ["Kylian Mbappé", "Delantero", "assets/players/france-kylian-mbappe.jpg"],
+      ["Ousmane Dembélé", "Extremo", "assets/players/france-ousmane-dembele.jpg"],
+      ["Michael Olise", "Extremo", "assets/players/france-michael-olise.jpg"],
     ],
   },
   england: {
@@ -237,9 +237,9 @@ const COUNTRY_DATA = {
     bestParticipation: "Campeón, 1958, 1962, 1970, 1994 y 2002",
     probability: 6.6,
     players: [
-      ["Neymar", "Extremo"],
-      ["Vinícius Júnior", "Extremo"],
-      ["Marquinhos", "Defensa central"],
+      ["Neymar", "Extremo", "assets/players/brazil-neymar.jpg"],
+      ["Vinícius Júnior", "Extremo", "assets/players/brazil-vinicius-junior.jpg"],
+      ["Marquinhos", "Defensa central", "assets/players/brazil-marquinhos.jpg"],
     ],
   },
   portugal: {
@@ -267,9 +267,9 @@ const COUNTRY_DATA = {
     bestParticipation: "Subcampeón, 1974, 1978 y 2010",
     probability: 3.6,
     players: [
-      ["Virgil van Dijk", "Defensa central"],
-      ["Frenkie de Jong", "Mediocampista"],
-      ["Cody Gakpo", "Extremo"],
+      ["Virgil van Dijk", "Defensa central", "assets/players/netherlands-virgil-van-dijk.jpg"],
+      ["Frenkie de Jong", "Mediocampista", "assets/players/netherlands-frenkie-de-jong.jpg"],
+      ["Cody Gakpo", "Extremo", "assets/players/netherlands-cody-gakpo.jpg"],
     ],
   },
   belgium: {
@@ -282,9 +282,9 @@ const COUNTRY_DATA = {
     bestParticipation: "Tercer lugar, 2018",
     probability: 2.4,
     players: [
-      ["Kevin De Bruyne", "Mediocampista"],
-      ["Jérémy Doku", "Extremo"],
-      ["Thibaut Courtois", "Portero"],
+      ["Kevin De Bruyne", "Mediocampista", "assets/players/belgium-kevin-de-bruyne.jpg"],
+      ["Jérémy Doku", "Extremo", "assets/players/belgium-jeremy-doku.jpg"],
+      ["Thibaut Courtois", "Portero", "assets/players/belgium-thibaut-courtois.jpg"],
     ],
   },
   germany: {
@@ -297,9 +297,9 @@ const COUNTRY_DATA = {
     bestParticipation: "Campeón, 1954, 1974, 1990 y 2014",
     probability: 5.1,
     players: [
-      ["Jamal Musiala", "Mediapunta"],
-      ["Florian Wirtz", "Mediapunta"],
-      ["Joshua Kimmich", "Mediocampista"],
+      ["Jamal Musiala", "Mediapunta", "assets/players/germany-jamal-musiala.jpg"],
+      ["Florian Wirtz", "Mediapunta", "assets/players/germany-florian-wirtz.jpg"],
+      ["Joshua Kimmich", "Mediocampista", "assets/players/germany-joshua-kimmich.jpg"],
     ],
   },
   croatia: {
@@ -312,9 +312,9 @@ const COUNTRY_DATA = {
     bestParticipation: "Subcampeón, 2018",
     probability: 1.6,
     players: [
-      ["Luka Modrić", "Mediocampista"],
-      ["Joško Gvardiol", "Defensa"],
-      ["Mateo Kovačić", "Mediocampista"],
+      ["Luka Modrić", "Mediocampista", "assets/players/croatia-luka-modric.jpg"],
+      ["Joško Gvardiol", "Defensa", "assets/players/croatia-josko-gvardiol.jpg"],
+      ["Mateo Kovačić", "Mediocampista", "assets/players/croatia-mateo-kovacic.jpg"],
     ],
   },
   morocco: {
@@ -327,9 +327,9 @@ const COUNTRY_DATA = {
     bestParticipation: "Semifinales, 2022",
     probability: 1.9,
     players: [
-      ["Achraf Hakimi", "Lateral derecho"],
-      ["Yassine Bounou", "Portero"],
-      ["Sofyan Amrabat", "Mediocentro"],
+      ["Achraf Hakimi", "Lateral derecho", "assets/players/morocco-achraf-hakimi.jpg"],
+      ["Yassine Bounou", "Portero", "assets/players/morocco-yassine-bounou.jpg"],
+      ["Sofyan Amrabat", "Mediocentro", "assets/players/morocco-sofyan-amrabat.jpg"],
     ],
   },
   colombia: {
@@ -342,9 +342,9 @@ const COUNTRY_DATA = {
     bestParticipation: "Cuartos de final, 2014",
     probability: 2.1,
     players: [
-      ["Luis Díaz", "Extremo"],
-      ["James Rodríguez", "Mediapunta"],
-      ["Daniel Muñoz", "Defensa"],
+      ["Luis Díaz", "Extremo", "assets/players/colombia-luis-diaz.jpg"],
+      ["James Rodríguez", "Mediapunta", "assets/players/colombia-james-rodriguez.jpg"],
+      ["Daniel Muñoz", "Defensa", "assets/players/colombia-daniel-munoz.jpg"],
     ],
   },
   uruguay: {
@@ -357,9 +357,9 @@ const COUNTRY_DATA = {
     bestParticipation: "Campeón, 1930 y 1950",
     probability: 1.1,
     players: [
-      ["Federico Valverde", "Mediocampista"],
-      ["Darwin Núñez", "Delantero"],
-      ["Ronald Araújo", "Defensa central"],
+      ["Federico Valverde", "Mediocampista", "assets/players/uruguay-federico-valverde.jpg"],
+      ["Darwin Núñez", "Delantero", "assets/players/uruguay-darwin-nunez.jpg"],
+      ["Ronald Araújo", "Defensa central", "assets/players/uruguay-ronald-araujo.jpg"],
     ],
   },
   switzerland: {
@@ -372,9 +372,9 @@ const COUNTRY_DATA = {
     bestParticipation: "Cuartos de final, 1934, 1938 y 1954",
     probability: 1,
     players: [
-      ["Granit Xhaka", "Mediocampista"],
-      ["Manuel Akanji", "Defensa central"],
-      ["Gregor Kobel", "Portero"],
+      ["Granit Xhaka", "Mediocampista", "assets/players/switzerland-granit-xhaka.jpg"],
+      ["Manuel Akanji", "Defensa central", "assets/players/switzerland-manuel-akanji.jpg"],
+      ["Gregor Kobel", "Portero", "assets/players/switzerland-gregor-kobel.jpg"],
     ],
   },
   japan: {
@@ -387,9 +387,9 @@ const COUNTRY_DATA = {
     bestParticipation: "Octavos de final",
     probability: 0.9,
     players: [
-      ["Kaoru Mitoma", "Extremo"],
-      ["Takefusa Kubo", "Mediapunta"],
-      ["Wataru Endo", "Mediocentro"],
+      ["Kaoru Mitoma", "Extremo", "assets/players/japan-kaoru-mitoma.png"],
+      ["Takefusa Kubo", "Mediapunta", "assets/players/japan-takefusa-kubo.jpg"],
+      ["Wataru Endo", "Mediocentro", "assets/players/japan-wataru-endo.jpg"],
     ],
   },
   senegal: {
@@ -402,9 +402,9 @@ const COUNTRY_DATA = {
     bestParticipation: "Cuartos de final, 2002",
     probability: 0.7,
     players: [
-      ["Sadio Mané", "Delantero"],
-      ["Kalidou Koulibaly", "Defensa central"],
-      ["Pape Matar Sarr", "Mediocampista"],
+      ["Sadio Mané", "Delantero", "assets/players/senegal-sadio-mane.jpg"],
+      ["Kalidou Koulibaly", "Defensa central", "assets/players/senegal-kalidou-koulibaly.jpg"],
+      ["Pape Matar Sarr", "Mediocampista", "assets/players/senegal-pape-matar-sarr.jpg"],
     ],
   },
   iran: {
@@ -417,9 +417,9 @@ const COUNTRY_DATA = {
     bestParticipation: "Fase de grupos",
     probability: 0.16,
     players: [
-      ["Mehdi Taremi", "Delantero"],
-      ["Saman Ghoddos", "Mediocampista"],
-      ["Alireza Jahanbakhsh", "Extremo"],
+      ["Mehdi Taremi", "Delantero", "assets/players/iran-mehdi-taremi.jpg"],
+      ["Saman Ghoddos", "Mediocampista", "assets/players/iran-saman-ghoddos.jpg"],
+      ["Alireza Jahanbakhsh", "Extremo", "assets/players/iran-alireza-jahanbakhsh.jpg"],
     ],
   },
   korea: {
@@ -432,9 +432,9 @@ const COUNTRY_DATA = {
     bestParticipation: "Cuarto lugar, 2002",
     probability: 0.22,
     players: [
-      ["Son Heung-min", "Delantero"],
-      ["Kim Min-jae", "Defensa central"],
-      ["Lee Kang-in", "Mediapunta"],
+      ["Son Heung-min", "Delantero", "assets/players/korea-son-heung-min.jpg"],
+      ["Kim Min-jae", "Defensa central", "assets/players/korea-kim-min-jae.jpg"],
+      ["Lee Kang-in", "Mediapunta", "assets/players/korea-lee-kang-in.jpg"],
     ],
   },
   ecuador: {
@@ -447,9 +447,9 @@ const COUNTRY_DATA = {
     bestParticipation: "Octavos de final, 2006",
     probability: 1.4,
     players: [
-      ["Moisés Caicedo", "Mediocampista"],
-      ["Piero Hincapié", "Defensa central"],
-      ["Pervis Estupiñán", "Lateral izquierdo"],
+      ["Moisés Caicedo", "Mediocampista", "assets/players/ecuador-moises-caicedo.jpg"],
+      ["Piero Hincapié", "Defensa central", "assets/players/ecuador-piero-hincapie.jpg"],
+      ["Pervis Estupiñán", "Lateral izquierdo", "assets/players/ecuador-pervis-estupinan.jpg"],
     ],
   },
   austria: {
@@ -462,9 +462,9 @@ const COUNTRY_DATA = {
     bestParticipation: "Tercer lugar, 1954",
     probability: 0.6,
     players: [
-      ["David Alaba", "Defensa"],
-      ["Marcel Sabitzer", "Mediocampista"],
-      ["Konrad Laimer", "Mediocampista"],
+      ["David Alaba", "Defensa", "assets/players/austria-david-alaba.jpg"],
+      ["Marcel Sabitzer", "Mediocampista", "assets/players/austria-marcel-sabitzer.jpg"],
+      ["Konrad Laimer", "Mediocampista", "assets/players/austria-konrad-laimer.jpg"],
     ],
   },
   australia: {
@@ -477,9 +477,9 @@ const COUNTRY_DATA = {
     bestParticipation: "Octavos de final, 2006 y 2022",
     probability: 0.28,
     players: [
-      ["Mathew Ryan", "Portero"],
-      ["Jackson Irvine", "Mediocampista"],
-      ["Harry Souttar", "Defensa central"],
+      ["Mathew Ryan", "Portero", "assets/players/australia-mathew-ryan.jpg"],
+      ["Jackson Irvine", "Mediocampista", "assets/players/australia-jackson-irvine.jpg"],
+      ["Harry Souttar", "Defensa central", "assets/players/australia-harry-souttar.jpg"],
     ],
   },
   norway: {
@@ -492,9 +492,9 @@ const COUNTRY_DATA = {
     bestParticipation: "Octavos de final, 1998",
     probability: 3.5,
     players: [
-      ["Erling Haaland", "Delantero"],
-      ["Martin Ødegaard", "Mediocampista"],
-      ["Alexander Sørloth", "Delantero"],
+      ["Erling Haaland", "Delantero", "assets/players/norway-erling-haaland.jpg"],
+      ["Martin Ødegaard", "Mediocampista", "assets/players/norway-martin-odegaard.jpg"],
+      ["Alexander Sørloth", "Delantero", "assets/players/norway-alexander-sorloth.jpg"],
     ],
   },
   panama: {
@@ -507,8 +507,8 @@ const COUNTRY_DATA = {
     bestParticipation: "Fase de grupos, 2018",
     probability: 0.07,
     players: [
-      ["Michael Murillo", "Lateral derecho"],
-      ["Adalberto Carrasquilla", "Mediocampista"],
+      ["Michael Murillo", "Lateral derecho", "assets/players/panama-michael-murillo.jpg"],
+      ["Adalberto Carrasquilla", "Mediocampista", "assets/players/panama-adalberto-carrasquilla.jpg"],
       ["José Fajardo", "Delantero"],
     ],
   },
@@ -522,9 +522,9 @@ const COUNTRY_DATA = {
     bestParticipation: "Fase de grupos",
     probability: 0.18,
     players: [
-      ["Mohamed Salah", "Extremo"],
-      ["Omar Marmoush", "Delantero"],
-      ["Trézéguet", "Extremo"],
+      ["Mohamed Salah", "Extremo", "assets/players/egypt-mohamed-salah.jpg"],
+      ["Omar Marmoush", "Delantero", "assets/players/egypt-omar-marmoush.png"],
+      ["Trézéguet", "Extremo", "assets/players/egypt-trezeguet.jpg"],
     ],
   },
   algeria: {
@@ -537,9 +537,9 @@ const COUNTRY_DATA = {
     bestParticipation: "Octavos de final, 2014",
     probability: 0.2,
     players: [
-      ["Riyad Mahrez", "Extremo"],
-      ["Ismaël Bennacer", "Mediocampista"],
-      ["Ramy Bensebaini", "Defensa"],
+      ["Riyad Mahrez", "Extremo", "assets/players/algeria-riyad-mahrez.jpg"],
+      ["Ismaël Bennacer", "Mediocampista", "assets/players/algeria-ismael-bennacer.jpg"],
+      ["Ramy Bensebaini", "Defensa", "assets/players/algeria-ramy-bensebaini.jpg"],
     ],
   },
   scotland: {
@@ -552,9 +552,9 @@ const COUNTRY_DATA = {
     bestParticipation: "Fase de grupos",
     probability: 0.2,
     players: [
-      ["Andy Robertson", "Lateral izquierdo"],
-      ["Scott McTominay", "Mediocampista"],
-      ["John McGinn", "Mediocampista"],
+      ["Andy Robertson", "Lateral izquierdo", "assets/players/scotland-andy-robertson.jpg"],
+      ["Scott McTominay", "Mediocampista", "assets/players/scotland-scott-mctominay.jpg"],
+      ["John McGinn", "Mediocampista", "assets/players/scotland-john-mcginn.jpg"],
     ],
   },
   paraguay: {
@@ -567,9 +567,9 @@ const COUNTRY_DATA = {
     bestParticipation: "Cuartos de final, 2010",
     probability: 0.35,
     players: [
-      ["Miguel Almirón", "Mediapunta"],
-      ["Julio Enciso", "Delantero"],
-      ["Diego Gómez", "Mediocampista"],
+      ["Miguel Almirón", "Mediapunta", "assets/players/paraguay-miguel-almiron.jpg"],
+      ["Julio Enciso", "Delantero", "assets/players/paraguay-julio-enciso.jpg"],
+      ["Diego Gómez", "Mediocampista", "assets/players/paraguay-diego-gomez.jpg"],
     ],
   },
   tunisia: {
@@ -582,9 +582,9 @@ const COUNTRY_DATA = {
     bestParticipation: "Fase de grupos",
     probability: 0.09,
     players: [
-      ["Ellyes Skhiri", "Mediocampista"],
-      ["Hannibal Mejbri", "Mediocampista"],
-      ["Ali Abdi", "Lateral izquierdo"],
+      ["Ellyes Skhiri", "Mediocampista", "assets/players/tunisia-ellyes-skhiri.jpg"],
+      ["Hannibal Mejbri", "Mediocampista", "assets/players/tunisia-hannibal-mejbri.jpg"],
+      ["Ali Abdi", "Lateral izquierdo", "assets/players/tunisia-ali-abdi.png"],
     ],
   },
   "cote-divoire": {
@@ -597,9 +597,9 @@ const COUNTRY_DATA = {
     bestParticipation: "Fase de grupos",
     probability: 0.4,
     players: [
-      ["Franck Kessié", "Mediocampista"],
-      ["Amad Diallo", "Extremo"],
-      ["Evan Ndicka", "Defensa central"],
+      ["Franck Kessié", "Mediocampista", "assets/players/cote-divoire-franck-kessie.jpg"],
+      ["Amad Diallo", "Extremo", "assets/players/cote-divoire-amad-diallo.jpg"],
+      ["Evan Ndicka", "Defensa central", "assets/players/cote-divoire-evan-ndicka.jpg"],
     ],
   },
   uzbekistan: {
@@ -612,9 +612,9 @@ const COUNTRY_DATA = {
     bestParticipation: "Debut mundialista",
     probability: 0.04,
     players: [
-      ["Eldor Shomurodov", "Delantero"],
-      ["Abbosbek Fayzullaev", "Mediapunta"],
-      ["Abdukodir Khusanov", "Defensa central"],
+      ["Eldor Shomurodov", "Delantero", "assets/players/uzbekistan-eldor-shomurodov.jpg"],
+      ["Abbosbek Fayzullaev", "Mediapunta", "assets/players/uzbekistan-abbosbek-fayzullaev.png"],
+      ["Abdukodir Khusanov", "Defensa central", "assets/players/uzbekistan-abdukodir-khusanov.jpg"],
     ],
   },
   qatar: {
@@ -627,9 +627,9 @@ const COUNTRY_DATA = {
     bestParticipation: "Fase de grupos, 2022",
     probability: 0.08,
     players: [
-      ["Akram Afif", "Extremo"],
-      ["Almoez Ali", "Delantero"],
-      ["Boualem Khoukhi", "Defensa"],
+      ["Akram Afif", "Extremo", "assets/players/qatar-akram-afif.jpg"],
+      ["Almoez Ali", "Delantero", "assets/players/qatar-almoez-ali.jpg"],
+      ["Boualem Khoukhi", "Defensa", "assets/players/qatar-boualem-khoukhi.png"],
     ],
   },
   "saudi-arabia": {
@@ -642,9 +642,9 @@ const COUNTRY_DATA = {
     bestParticipation: "Octavos de final, 1994",
     probability: 0.11,
     players: [
-      ["Salem Al-Dawsari", "Extremo"],
-      ["Saud Abdulhamid", "Lateral derecho"],
-      ["Firas Al-Buraikan", "Delantero"],
+      ["Salem Al-Dawsari", "Extremo", "assets/players/saudi-arabia-salem-al-dawsari.jpg"],
+      ["Saud Abdulhamid", "Lateral derecho", "assets/players/saudi-arabia-saud-abdulhamid.jpg"],
+      ["Firas Al-Buraikan", "Delantero", "assets/players/saudi-arabia-firas-al-buraikan.jpg"],
     ],
   },
   "south-africa": {
@@ -657,9 +657,9 @@ const COUNTRY_DATA = {
     bestParticipation: "Fase de grupos",
     probability: 0.1,
     players: [
-      ["Ronwen Williams", "Portero"],
+      ["Ronwen Williams", "Portero", "assets/players/south-africa-ronwen-williams.jpg"],
       ["Teboho Mokoena", "Mediocampista"],
-      ["Percy Tau", "Delantero"],
+      ["Percy Tau", "Delantero", "assets/players/south-africa-percy-tau.jpg"],
     ],
   },
   jordan: {
@@ -672,9 +672,9 @@ const COUNTRY_DATA = {
     bestParticipation: "Debut mundialista",
     probability: 0.02,
     players: [
-      ["Musa Al-Taamari", "Extremo"],
-      ["Yazan Al-Naimat", "Delantero"],
-      ["Noor Al-Rawabdeh", "Mediocampista"],
+      ["Musa Al-Taamari", "Extremo", "assets/players/jordan-musa-al-taamari.png"],
+      ["Yazan Al-Naimat", "Delantero", "assets/players/jordan-yazan-al-naimat.jpg"],
+      ["Noor Al-Rawabdeh", "Mediocampista", "assets/players/jordan-noor-al-rawabdeh.png"],
     ],
   },
   "cabo-verde": {
@@ -687,9 +687,9 @@ const COUNTRY_DATA = {
     bestParticipation: "Debut mundialista",
     probability: 0.02,
     players: [
-      ["Ryan Mendes", "Extremo"],
-      ["Garry Rodrigues", "Extremo"],
-      ["Logan Costa", "Defensa central"],
+      ["Ryan Mendes", "Extremo", "assets/players/cabo-verde-ryan-mendes.jpg"],
+      ["Garry Rodrigues", "Extremo", "assets/players/cabo-verde-garry-rodrigues.jpg"],
+      ["Logan Costa", "Defensa central", "assets/players/cabo-verde-logan-costa.jpg"],
     ],
   },
   ghana: {
@@ -702,9 +702,9 @@ const COUNTRY_DATA = {
     bestParticipation: "Cuartos de final, 2010",
     probability: 0.25,
     players: [
-      ["Mohammed Kudus", "Mediapunta"],
-      ["Thomas Partey", "Mediocampista"],
-      ["Antoine Semenyo", "Delantero"],
+      ["Mohammed Kudus", "Mediapunta", "assets/players/ghana-mohammed-kudus.jpg"],
+      ["Thomas Partey", "Mediocampista", "assets/players/ghana-thomas-partey.jpg"],
+      ["Antoine Semenyo", "Delantero", "assets/players/ghana-antoine-semenyo.png"],
     ],
   },
   curacao: {
@@ -717,9 +717,9 @@ const COUNTRY_DATA = {
     bestParticipation: "Debut mundialista",
     probability: 0.005,
     players: [
-      ["Juninho Bacuna", "Mediocampista"],
-      ["Eloy Room", "Portero"],
-      ["Juriën Gaari", "Defensa"],
+      ["Juninho Bacuna", "Mediocampista", "assets/players/curacao-juninho-bacuna.jpg"],
+      ["Eloy Room", "Portero", "assets/players/curacao-eloy-room.jpg"],
+      ["Juriën Gaari", "Defensa", "assets/players/curacao-jurien-gaari.jpg"],
     ],
   },
   haiti: {
@@ -732,9 +732,9 @@ const COUNTRY_DATA = {
     bestParticipation: "Fase de grupos, 1974",
     probability: 0.01,
     players: [
-      ["Duckens Nazon", "Delantero"],
+      ["Duckens Nazon", "Delantero", "assets/players/haiti-duckens-nazon.jpg"],
       ["Frantzdy Pierrot", "Delantero"],
-      ["Jean-Ricner Bellegarde", "Mediocampista"],
+      ["Jean-Ricner Bellegarde", "Mediocampista", "assets/players/haiti-jean-ricner-bellegarde.jpg"],
     ],
   },
   "new-zealand": {
@@ -747,9 +747,9 @@ const COUNTRY_DATA = {
     bestParticipation: "Fase de grupos",
     probability: 0.05,
     players: [
-      ["Chris Wood", "Delantero"],
-      ["Sarpreet Singh", "Mediocampista"],
-      ["Tim Payne", "Mediocampista"],
+      ["Chris Wood", "Delantero", "assets/players/new-zealand-chris-wood.jpg"],
+      ["Sarpreet Singh", "Mediocampista", "assets/players/new-zealand-sarpreet-singh.png"],
+      ["Tim Payne", "Mediocampista", "assets/players/new-zealand-tim-payne.jpg"],
     ],
   },
   bosnia: {
@@ -762,9 +762,9 @@ const COUNTRY_DATA = {
     bestParticipation: "Fase de grupos, 2014",
     probability: 0.06,
     players: [
-      ["Edin Džeko", "Delantero"],
-      ["Sead Kolašinac", "Defensa"],
-      ["Amar Dedić", "Lateral derecho"],
+      ["Edin Džeko", "Delantero", "assets/players/bosnia-edin-dzeko.jpg"],
+      ["Sead Kolašinac", "Defensa", "assets/players/bosnia-sead-kolasinac.jpg"],
+      ["Amar Dedić", "Lateral derecho", "assets/players/bosnia-amar-dedic.jpg"],
     ],
   },
   sweden: {
@@ -777,9 +777,9 @@ const COUNTRY_DATA = {
     bestParticipation: "Subcampeón, 1958",
     probability: 0.5,
     players: [
-      ["Viktor Gyökeres", "Delantero"],
-      ["Alexander Isak", "Delantero"],
-      ["Dejan Kulusevski", "Extremo"],
+      ["Viktor Gyökeres", "Delantero", "assets/players/sweden-viktor-gyokeres.jpg"],
+      ["Alexander Isak", "Delantero", "assets/players/sweden-alexander-isak.jpg"],
+      ["Dejan Kulusevski", "Extremo", "assets/players/sweden-dejan-kulusevski.jpg"],
     ],
   },
   turkey: {
@@ -792,9 +792,9 @@ const COUNTRY_DATA = {
     bestParticipation: "Tercer lugar, 2002",
     probability: 0.45,
     players: [
-      ["Hakan Çalhanoğlu", "Mediocampista"],
-      ["Arda Güler", "Mediapunta"],
-      ["Kenan Yildiz", "Delantero"],
+      ["Hakan Çalhanoğlu", "Mediocampista", "assets/players/turkey-hakan-calhanoglu.jpg"],
+      ["Arda Güler", "Mediapunta", "assets/players/turkey-arda-guler.jpg"],
+      ["Kenan Yildiz", "Delantero", "assets/players/turkey-kenan-yildiz.jpg"],
     ],
   },
   "czech-republic": {
@@ -807,9 +807,9 @@ const COUNTRY_DATA = {
     bestParticipation: "Subcampeón, 1934 y 1962 como Checoslovaquia",
     probability: 0.14,
     players: [
-      ["Patrik Schick", "Delantero"],
-      ["Tomáš Souček", "Mediocampista"],
-      ["Adam Hložek", "Delantero"],
+      ["Patrik Schick", "Delantero", "assets/players/czech-republic-patrik-schick.jpg"],
+      ["Tomáš Souček", "Mediocampista", "assets/players/czech-republic-tomas-soucek.jpg"],
+      ["Adam Hložek", "Delantero", "assets/players/czech-republic-adam-hlozek.jpg"],
     ],
   },
   "dr-congo": {
@@ -822,9 +822,9 @@ const COUNTRY_DATA = {
     bestParticipation: "Fase de grupos, 1974 como Zaire",
     probability: 0.03,
     players: [
-      ["Yoane Wissa", "Delantero"],
-      ["Chancel Mbemba", "Defensa central"],
-      ["Cédric Bakambu", "Delantero"],
+      ["Yoane Wissa", "Delantero", "assets/players/dr-congo-yoane-wissa.jpg"],
+      ["Chancel Mbemba", "Defensa central", "assets/players/dr-congo-chancel-mbemba.jpg"],
+      ["Cédric Bakambu", "Delantero", "assets/players/dr-congo-cedric-bakambu.jpg"],
     ],
   },
   iraq: {
@@ -837,9 +837,9 @@ const COUNTRY_DATA = {
     bestParticipation: "Fase de grupos, 1986",
     probability: 0.03,
     players: [
-      ["Aymen Hussein", "Delantero"],
+      ["Aymen Hussein", "Delantero", "assets/players/iraq-aymen-hussein.jpg"],
       ["Ali Jasim", "Extremo"],
-      ["Zidane Iqbal", "Mediocampista"],
+      ["Zidane Iqbal", "Mediocampista", "assets/players/iraq-zidane-iqbal.jpg"],
     ],
   },
 };
