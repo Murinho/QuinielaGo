@@ -209,7 +209,7 @@ const COUNTRY_DATA = {
     players: [
       ["Kylian Mbappé", "Delantero"],
       ["Ousmane Dembélé", "Extremo"],
-      ["William Saliba", "Defensa central"],
+      ["Michael Olise", "Extremo"],
     ],
   },
   england: {
@@ -237,8 +237,8 @@ const COUNTRY_DATA = {
     bestParticipation: "Campeón, 1958, 1962, 1970, 1994 y 2002",
     probability: 6.6,
     players: [
+      ["Neymar", "Extremo"],
       ["Vinícius Júnior", "Extremo"],
-      ["Raphinha", "Extremo"],
       ["Marquinhos", "Defensa central"],
     ],
   },
@@ -269,7 +269,7 @@ const COUNTRY_DATA = {
     players: [
       ["Virgil van Dijk", "Defensa central"],
       ["Frenkie de Jong", "Mediocampista"],
-      ["Xavi Simons", "Mediapunta"],
+      ["Cody Gakpo", "Extremo"],
     ],
   },
   belgium: {
@@ -344,7 +344,7 @@ const COUNTRY_DATA = {
     players: [
       ["Luis Díaz", "Extremo"],
       ["James Rodríguez", "Mediapunta"],
-      ["Jhon Durán", "Delantero"],
+      ["Daniel Muñoz", "Defensa"],
     ],
   },
   uruguay: {
@@ -418,7 +418,7 @@ const COUNTRY_DATA = {
     probability: 0.16,
     players: [
       ["Mehdi Taremi", "Delantero"],
-      ["Sardar Azmoun", "Delantero"],
+      ["Saman Ghoddos", "Mediocampista"],
       ["Alireza Jahanbakhsh", "Extremo"],
     ],
   },
@@ -598,7 +598,7 @@ const COUNTRY_DATA = {
     probability: 0.4,
     players: [
       ["Franck Kessié", "Mediocampista"],
-      ["Simon Adingra", "Extremo"],
+      ["Amad Diallo", "Extremo"],
       ["Evan Ndicka", "Defensa central"],
     ],
   },
@@ -749,7 +749,7 @@ const COUNTRY_DATA = {
     players: [
       ["Chris Wood", "Delantero"],
       ["Sarpreet Singh", "Mediocampista"],
-      ["Liberato Cacace", "Lateral izquierdo"],
+      ["Tim Payne", "Mediocampista"],
     ],
   },
   bosnia: {
