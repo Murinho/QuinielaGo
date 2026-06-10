@@ -1,0 +1,249 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>QuinielaGo</title>
+    <link rel="stylesheet" href="styles.css" />
+    <script src="data.js" defer></script>
+    <script src="app.js" defer></script>
+  </head>
+  <body>
+    <div class="app-shell">
+      <header class="topbar" aria-label="Menú principal">
+        <div class="brand-lockup">
+          <img
+            class="brand-mark"
+            src="assets/world_cup_2026_logo.png"
+            alt=""
+            aria-hidden="true"
+          />
+          <div>
+            <p class="event-label">Copa Mundial FIFA 2026</p>
+            <h1>QuinielaGo</h1>
+          </div>
+        </div>
+
+        <div class="quick-summary" aria-label="Resumen de quiniela">
+          <div>
+            <span>Participantes</span>
+            <strong id="participantCount">0</strong>
+          </div>
+          <div>
+            <span>Equipos</span>
+            <strong id="teamSlotCount">0</strong>
+          </div>
+          <div>
+            <span>Países</span>
+            <strong id="selectedCountryCount">48</strong>
+          </div>
+        </div>
+      </header>
+
+      <main class="main-grid">
+        <section class="workspace-panel participants-panel" aria-labelledby="participantsTitle">
+          <div class="panel-header">
+            <div>
+              <p class="section-label">Jugadores</p>
+              <h2 id="participantsTitle">Participantes</h2>
+            </div>
+            <button class="icon-button primary-action" id="openPersonDialog" type="button">
+              <svg aria-hidden="true" viewBox="0 0 24 24">
+                <path d="M12 5v14M5 12h14" />
+              </svg>
+              <span>Agregar</span>
+            </button>
+          </div>
+
+          <div class="participant-list" id="participantsList"></div>
+          <div class="empty-state" id="participantEmpty">Aún no hay participantes.</div>
+        </section>
+
+        <section class="workspace-panel countries-panel" aria-labelledby="countriesTitle">
+          <div class="panel-header countries-header">
+            <div>
+              <p class="section-label">Sorteo oficial</p>
+              <h2 id="countriesTitle">Países por bombo</h2>
+            </div>
+            <div class="selection-pill">
+              <strong id="selectedCountryPill">48</strong>
+              <span>seleccionados</span>
+            </div>
+          </div>
+
+          <div class="pots-grid" id="potsGrid"></div>
+        </section>
+      </main>
+
+      <footer class="playbar" aria-label="Acciones de quiniela">
+        <div class="balance-status" id="balanceStatus">
+          <span class="status-dot"></span>
+          <span id="balanceCopy">Agrega participantes para iniciar.</span>
+        </div>
+        <button class="play-button" id="playButton" type="button">¡Jugar!</button>
+      </footer>
+    </div>
+
+    <dialog class="modal" id="personDialog" aria-labelledby="personDialogTitle">
+      <form class="modal-card" id="personForm" method="dialog">
+        <div class="modal-heading">
+          <p class="section-label">Participante</p>
+          <h2 id="personDialogTitle">Nuevo participante</h2>
+        </div>
+
+        <label class="field-group" for="personName">
+          <span>Nombre</span>
+          <input id="personName" name="personName" type="text" autocomplete="off" required />
+        </label>
+
+        <div class="field-group">
+          <span>Cantidad de equipos</span>
+          <div class="counter-control">
+            <button class="counter-button" id="decreaseTeams" type="button" aria-label="Restar equipo">
+              <svg aria-hidden="true" viewBox="0 0 24 24">
+                <path d="M5 12h14" />
+              </svg>
+            </button>
+            <input
+              id="teamAmount"
+              name="teamAmount"
+              type="number"
+              min="1"
+              max="48"
+              value="1"
+              inputmode="numeric"
+              required
+            />
+            <button class="counter-button" id="increaseTeams" type="button" aria-label="Sumar equipo">
+              <svg aria-hidden="true" viewBox="0 0 24 24">
+                <path d="M12 5v14M5 12h14" />
+              </svg>
+            </button>
+          </div>
+        </div>
+
+        <div class="modal-actions">
+          <button class="secondary-button" id="cancelPerson" type="button">Cancelar</button>
+          <button class="primary-action" type="submit">Agregar</button>
+        </div>
+      </form>
+    </dialog>
+
+    <dialog class="modal" id="validationDialog" aria-labelledby="validationTitle">
+      <div class="modal-card validation-card">
+        <div class="modal-heading">
+          <p class="section-label" id="validationEyebrow">Balance</p>
+          <h2 id="validationTitle">Revisa la quiniela</h2>
+        </div>
+        <p class="validation-copy" id="validationCopy"></p>
+        <div class="validation-grid">
+          <div>
+            <span>Equipos pedidos</span>
+            <strong id="validationTeams">0</strong>
+          </div>
+          <div>
+            <span>Países elegidos</span>
+            <strong id="validationCountries">0</strong>
+          </div>
+        </div>
+        <div class="modal-actions">
+          <button class="secondary-button" id="closeValidation" type="button">Entendido</button>
+          <button class="primary-action" id="startGameButton" type="button" hidden>Iniciar sorteo</button>
+        </div>
+      </div>
+    </dialog>
+
+    <section class="game-shell" id="gameShell" hidden>
+      <header class="game-topbar" aria-label="Quiniela en juego">
+        <div class="brand-lockup">
+          <img
+            class="brand-mark"
+            src="assets/world_cup_2026_logo.png"
+            alt=""
+            aria-hidden="true"
+          />
+          <div>
+            <p class="event-label">QuinielaGo</p>
+            <h1>Juego</h1>
+          </div>
+        </div>
+
+        <div class="game-progress" aria-label="Progreso del sorteo">
+          <div>
+            <span>Turno</span>
+            <strong id="turnNumber">1</strong>
+          </div>
+          <div>
+            <span>Asignados</span>
+            <strong id="assignedCount">0</strong>
+          </div>
+          <div>
+            <span>Disponibles</span>
+            <strong id="remainingCount">0</strong>
+          </div>
+        </div>
+
+        <button class="secondary-button game-menu-button" id="backToMenuButton" type="button">Menú</button>
+      </header>
+
+      <main class="game-stage">
+        <section class="roulette-step" id="personStep" aria-labelledby="personStepTitle">
+          <div class="roulette-layout">
+            <div class="wheel-stage">
+              <div class="wheel-pointer" aria-hidden="true"></div>
+              <div class="roulette-wheel" id="personWheel" aria-label="Ruleta de participantes"></div>
+            </div>
+            <aside class="spin-panel">
+              <p class="section-label">Paso 1</p>
+              <h2 id="personStepTitle">Gira participantes</h2>
+              <p class="spin-copy" id="personSpinCopy">
+                La flecha marca a la persona que recibirá el siguiente país.
+              </p>
+              <button class="play-button spin-button" id="spinPersonButton" type="button">Girar</button>
+              <div class="selected-result" id="selectedPersonResult" hidden></div>
+            </aside>
+          </div>
+        </section>
+
+        <section class="roulette-step" id="countryStep" aria-labelledby="countryStepTitle" hidden>
+          <div class="roulette-layout">
+            <div class="wheel-stage">
+              <div class="wheel-pointer" aria-hidden="true"></div>
+              <div class="roulette-wheel" id="countryWheel" aria-label="Ruleta de países"></div>
+            </div>
+            <aside class="spin-panel">
+              <p class="section-label">Paso 2</p>
+              <h2 id="countryStepTitle">Gira países</h2>
+              <p class="spin-copy" id="countrySpinCopy">
+                Ahora se sortea el país que se asignará al participante elegido.
+              </p>
+              <button class="play-button spin-button" id="spinCountryButton" type="button">Girar</button>
+              <div class="selected-result" id="selectedCountryResult" hidden></div>
+            </aside>
+          </div>
+        </section>
+
+        <section class="assignment-step" id="assignmentStep" aria-labelledby="assignmentTitle" hidden>
+          <div class="assignment-hero" id="assignmentHero"></div>
+          <div class="assignment-actions">
+            <button class="play-button" id="nextTurnButton" type="button">Siguiente turno</button>
+          </div>
+        </section>
+
+        <section class="summary-step" id="summaryStep" aria-labelledby="summaryTitle" hidden>
+          <div class="summary-heading">
+            <div>
+              <p class="section-label">Resumen final</p>
+              <h2 id="summaryTitle">Asignaciones de la quiniela</h2>
+            </div>
+            <div class="summary-actions">
+              <button class="secondary-button" id="downloadCsvButton" type="button">Guardar CSV</button>
+              <button class="primary-action" id="newGameButton" type="button">Nueva quiniela</button>
+            </div>
+          </div>
+          <div class="summary-list" id="summaryList"></div>
+        </section>
+      </main>
+    </section>
+  </body>
+</html>
