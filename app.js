@@ -57,6 +57,7 @@ const els = {
   assignmentHero: document.querySelector("#assignmentHero"),
   nextTurnButton: document.querySelector("#nextTurnButton"),
   summaryList: document.querySelector("#summaryList"),
+  downloadCsvButton: document.querySelector("#downloadCsvButton"),
   newGameButton: document.querySelector("#newGameButton"),
 };
 
@@ -112,6 +113,10 @@ function getSelectedCountryTotal() {
 
 function getProbabilityRank(countryId) {
   return probabilityRanking.findIndex((country) => country.id === countryId) + 1;
+}
+
+function getPotNameForCountry(countryId) {
+  return POTS.find((pot) => pot.countries.includes(countryId))?.name || "";
 }
 
 function getGroupMembers(country) {
@@ -890,6 +895,93 @@ function renderSummaryStep() {
   els.summaryList.innerHTML = peopleSummary + remainingCountries;
 }
 
+function csvEscape(value) {
+  const safeValue = value === null || value === undefined ? "" : String(value);
+
+  if (/[",\r\n]/.test(safeValue)) {
+    return `"${safeValue.replaceAll('"', '""')}"`;
+  }
+
+  return safeValue;
+}
+
+function buildQuinielaCsv() {
+  const rows = [
+    [
+      "Participante",
+      "País",
+      "Grupo",
+      "Bombo",
+      "Probabilidad campeón",
+      "Ranking probabilidad",
+      "Mejor participación",
+      "Estado",
+    ],
+  ];
+
+  gameState.participants.forEach((person) => {
+    if (!person.assignedCountryIds.length) {
+      rows.push([person.name, "", "", "", "", "", "", "Sin país asignado"]);
+      return;
+    }
+
+    person.assignedCountryIds.forEach((countryId) => {
+      const country = countryById[countryId];
+
+      rows.push([
+        person.name,
+        country.name,
+        `Grupo ${country.group}`,
+        getPotNameForCountry(countryId),
+        formatProbability(country.probability),
+        getProbabilityRank(countryId),
+        country.bestParticipation,
+        "Asignado",
+      ]);
+    });
+  });
+
+  gameState.remainingCountryIds.forEach((countryId) => {
+    const country = countryById[countryId];
+
+    rows.push([
+      "Sin asignar",
+      country.name,
+      `Grupo ${country.group}`,
+      getPotNameForCountry(countryId),
+      formatProbability(country.probability),
+      getProbabilityRank(countryId),
+      country.bestParticipation,
+      "País sin asignar",
+    ]);
+  });
+
+  return rows.map((row) => row.map(csvEscape).join(",")).join("\r\n");
+}
+
+function downloadQuinielaCsv() {
+  if (!gameState || !gameState.assignments.length) {
+    return;
+  }
+
+  const now = new Date();
+  const timestamp = now
+    .toISOString()
+    .replaceAll(":", "-")
+    .replace(/\.\d{3}Z$/, "");
+  const csv = `\uFEFF${buildQuinielaCsv()}`;
+  const blob = new Blob([csv], { type: "text/csv;charset=utf-8" });
+  const url = URL.createObjectURL(blob);
+  const link = document.createElement("a");
+
+  link.href = url;
+  link.download = `quinielago-${timestamp}.csv`;
+  document.body.appendChild(link);
+  link.click();
+  link.remove();
+  window.setTimeout(() => URL.revokeObjectURL(url), 0);
+}
+
 document.querySelector("#openPersonDialog").addEventListener("click", openPersonDialog);
 document.querySelector("#cancelPerson").addEventListener("click", closePersonDialog);
 document.querySelector("#increaseTeams").addEventListener("click", () => stepTeamAmount(1));
@@ -902,6 +994,7 @@ els.backToMenuButton.addEventListener("click", returnToMenu);
 els.spinPersonButton.addEventListener("click", spinPerson);
 els.spinCountryButton.addEventListener("click", spinCountry);
 els.nextTurnButton.addEventListener("click", continueGame);
+els.downloadCsvButton.addEventListener("click", downloadQuinielaCsv);
 els.newGameButton.addEventListener("click", returnToMenu);
 els.personForm.addEventListener("submit", addParticipant);
 

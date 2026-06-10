@@ -1219,6 +1219,12 @@ button:focus-visible {
   margin-bottom: 16px;
 }
 
+.summary-actions {
+  display: flex;
+  flex: 0 0 auto;
+  gap: 10px;
+}
+
 .summary-list {
   display: grid;
   min-height: 0;
@@ -1347,7 +1353,8 @@ button:focus-visible {
   .game-topbar,
   .panel-header,
   .playbar,
-  .summary-heading {
+  .summary-heading,
+  .summary-actions {
     align-items: stretch;
     flex-direction: column;
   }
@@ -1379,7 +1386,8 @@ button:focus-visible {
   .icon-button,
   .play-button,
   .game-menu-button,
-  .summary-heading .primary-action {
+  .summary-actions,
+  .summary-actions button {
     width: 100%;
   }
 
