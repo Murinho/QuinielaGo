@@ -688,7 +688,15 @@ function renderPlayerCard(player, index, country) {
   const [name, position, photo] = player;
   const accentColor = getCountryAccentColor(country.color);
   const media = photo
-    ? `<img src="${photo}" alt="Foto de ${escapeHtml(name)}" loading="lazy" />`
+    ? `
+        <img
+          src="${photo}"
+          alt="Foto de ${escapeHtml(name)}"
+          loading="lazy"
+          onerror="this.hidden=true;this.nextElementSibling.hidden=false;"
+        />
+        <span hidden>${escapeHtml(getInitials(name))}</span>
+      `
     : `<span>${escapeHtml(getInitials(name))}</span>`;
 
   return `

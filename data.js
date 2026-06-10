@@ -177,9 +177,9 @@ const COUNTRY_DATA = {
     bestParticipation: "Campeón, 2010",
     probability: 16.1,
     players: [
-      ["Lamine Yamal", "Extremo"],
-      ["Rodri", "Mediocentro"],
-      ["Pedri", "Mediocampista"],
+      ["Lamine Yamal", "Extremo", "assets/players/spain-lamine-yamal.jpg"],
+      ["Rodri", "Mediocentro", "assets/players/spain-rodri.jpg"],
+      ["Pedri", "Mediocampista", "assets/players/spain-pedri.jpg"],
     ],
   },
   argentina: {
@@ -192,9 +192,9 @@ const COUNTRY_DATA = {
     bestParticipation: "Campeón, 1978, 1986 y 2022",
     probability: 10.4,
     players: [
-      ["Lionel Messi", "Delantero"],
-      ["Lautaro Martínez", "Delantero"],
-      ["Emiliano Martínez", "Portero"],
+      ["Lionel Messi", "Delantero", "assets/players/argentina-lionel-messi.jpg"],
+      ["Lautaro Martínez", "Delantero", "assets/players/argentina-lautaro-martinez.jpg"],
+      ["Emiliano Martínez", "Portero", "assets/players/argentina-emiliano-martinez.jpg"],
     ],
   },
   france: {
@@ -222,9 +222,9 @@ const COUNTRY_DATA = {
     bestParticipation: "Campeón, 1966",
     probability: 11.2,
     players: [
-      ["Harry Kane", "Delantero"],
-      ["Jude Bellingham", "Mediocampista"],
-      ["Bukayo Saka", "Extremo"],
+      ["Harry Kane", "Delantero", "assets/players/england-harry-kane.jpg"],
+      ["Jude Bellingham", "Mediocampista", "assets/players/england-jude-bellingham.jpg"],
+      ["Bukayo Saka", "Extremo", "assets/players/england-bukayo-saka.jpg"],
     ],
   },
   brazil: {
@@ -252,9 +252,9 @@ const COUNTRY_DATA = {
     bestParticipation: "Tercer lugar, 1966",
     probability: 7,
     players: [
-      ["Cristiano Ronaldo", "Delantero"],
-      ["Bruno Fernandes", "Mediocampista"],
-      ["Vitinha", "Mediocampista"],
+      ["Cristiano Ronaldo", "Delantero", "assets/players/portugal-cristiano-ronaldo.jpg"],
+      ["Bruno Fernandes", "Mediocampista", "assets/players/portugal-bruno-fernandes.jpg"],
+      ["Vitinha", "Mediocampista", "assets/players/portugal-vitinha.jpg"],
     ],
   },
   netherlands: {
