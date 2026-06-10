@@ -6,7 +6,7 @@
 
 QuinielaGo is a small local web app for running a FIFA World Cup 2026 quiniela. Add participants, choose the countries in play, spin the roulettes, and get a clear assignment summary for every player.
 
-![QuinielaGo setup screen](assets/readme/quinielago-setup.png)
+![QuinielaGo setup screen](assets/readme/quinielago-menu.png)
 
 ## Features
 
