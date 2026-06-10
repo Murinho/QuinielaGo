@@ -12,6 +12,8 @@ const participants = [];
 const selectedCountries = new Map(allCountryIds.map((id) => [id, true]));
 
 let gameState = null;
+let confettiFrameId = null;
+let confettiTimerId = null;
 
 const els = {
   appShell: document.querySelector(".app-shell"),
@@ -159,6 +161,86 @@ function getRandomPaletteColor() {
 
 function randomInt(min, max) {
   return Math.floor(Math.random() * (max - min + 1)) + min;
+}
+
+function clearWorldCupConfetti() {
+  const confettiLayer = document.querySelector(".confetti-layer");
+
+  if (confettiFrameId) {
+    window.cancelAnimationFrame(confettiFrameId);
+    confettiFrameId = null;
+  }
+
+  if (confettiLayer) {
+    confettiLayer.remove();
+  }
+
+  if (confettiTimerId) {
+    window.clearTimeout(confettiTimerId);
+    confettiTimerId = null;
+  }
+}
+
+function launchWorldCupConfetti() {
+  clearWorldCupConfetti();
+
+  const layer = document.createElement("div");
+  const fragment = document.createDocumentFragment();
+  const prefersReducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+  const pieceCount = prefersReducedMotion
+    ? Math.min(80, Math.max(48, Math.round(window.innerWidth / 18)))
+    : Math.min(150, Math.max(96, Math.round(window.innerWidth / 10)));
+  const palette = FIFA_COLORS.length ? FIFA_COLORS : ["#e30000", "#3150f4", "#005845", "#eaff2f"];
+
+  layer.className = prefersReducedMotion ? "confetti-layer is-reduced-motion" : "confetti-layer";
+  layer.setAttribute("aria-hidden", "true");
+
+  for (let index = 0; index < pieceCount; index += 1) {
+    const piece = document.createElement("span");
+    const duration = prefersReducedMotion ? randomInt(1600, 2200) : randomInt(2100, 2650);
+    const delay = prefersReducedMotion ? randomInt(0, 120) : randomInt(0, 180);
+    const width = randomInt(8, 15);
+    const height = randomInt(12, 24);
+    const spin = randomInt(420, 1320);
+    const driftEnd = randomInt(-180, 180);
+    const shapeClass = index % 5 === 0 ? "is-round" : index % 3 === 0 ? "is-ribbon" : "";
+
+    piece.className = `confetti-piece ${shapeClass}`.trim();
+    piece.style.left = `${Math.random() * 100}%`;
+    piece.style.setProperty("--confetti-color", palette[index % palette.length]);
+    piece.style.setProperty("--confetti-width", `${width}px`);
+    piece.style.setProperty("--confetti-height", `${height}px`);
+    piece.style.setProperty("--confetti-ribbon-width", `${Math.round(width * 1.8)}px`);
+    piece.style.setProperty("--confetti-ribbon-height", `${Math.max(4, Math.round(height * 0.48))}px`);
+    piece.style.setProperty("--confetti-drift-start", `${randomInt(-24, 24)}px`);
+    piece.style.setProperty("--confetti-mid-drift", `${Math.round(driftEnd * 0.55)}px`);
+    piece.style.setProperty("--confetti-drift-end", `${driftEnd}px`);
+    piece.style.setProperty("--confetti-mid-spin", `${Math.round(spin * 0.56)}deg`);
+    piece.style.setProperty("--confetti-spin", `${spin}deg`);
+    piece.style.setProperty("--confetti-duration", `${duration}ms`);
+    piece.style.setProperty("--confetti-delay", `${delay}ms`);
+    fragment.appendChild(piece);
+  }
+
+  layer.appendChild(fragment);
+  document.body.appendChild(layer);
+
+  confettiTimerId = window.setTimeout(() => {
+    layer.remove();
+    confettiTimerId = null;
+  }, 3000);
+}
+
+function queueWorldCupConfetti() {
+  clearWorldCupConfetti();
+
+  confettiFrameId = window.requestAnimationFrame(() => {
+    confettiFrameId = null;
+
+    if (!els.assignmentStep.hidden) {
+      launchWorldCupConfetti();
+    }
+  });
 }
 
 function positiveModulo(value, modulo) {
@@ -423,6 +505,7 @@ function startGame() {
 }
 
 function returnToMenu() {
+  clearWorldCupConfetti();
   gameState = null;
   els.gameShell.hidden = true;
   els.appShell.hidden = false;
@@ -440,6 +523,10 @@ function setGameStep(stepName) {
   Object.entries(stepByName).forEach(([name, element]) => {
     element.hidden = name !== stepName;
   });
+
+  if (stepName !== "assignment") {
+    clearWorldCupConfetti();
+  }
 }
 
 function updateGameProgress() {
@@ -839,6 +926,7 @@ function renderAssignmentStep(person, country) {
 
   const shouldFinish = !getEligibleParticipants().length || !gameState.remainingCountryIds.length;
   els.nextTurnButton.textContent = shouldFinish ? "Ver resumen" : "Siguiente turno";
+  queueWorldCupConfetti();
 }
 
 function continueGame() {
