@@ -213,9 +213,9 @@ function launchWorldCupConfetti() {
     piece.style.setProperty("--confetti-ribbon-width", `${Math.round(width * 1.8)}px`);
     piece.style.setProperty("--confetti-ribbon-height", `${Math.max(4, Math.round(height * 0.48))}px`);
     piece.style.setProperty("--confetti-drift-start", `${randomInt(-24, 24)}px`);
-    piece.style.setProperty("--confetti-mid-drift", `${Math.round(driftEnd * 0.55)}px`);
+    piece.style.setProperty("--confetti-mid-drift", `${Math.round(driftEnd * 0.58)}px`);
     piece.style.setProperty("--confetti-drift-end", `${driftEnd}px`);
-    piece.style.setProperty("--confetti-mid-spin", `${Math.round(spin * 0.56)}deg`);
+    piece.style.setProperty("--confetti-mid-spin", `${Math.round(spin * 0.58)}deg`);
     piece.style.setProperty("--confetti-spin", `${spin}deg`);
     piece.style.setProperty("--confetti-duration", `${duration}ms`);
     piece.style.setProperty("--confetti-delay", `${delay}ms`);
